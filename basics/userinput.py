@@ -1,7 +1,7 @@
 '''
     Author : Martand Singh
     Date: 16 Mar 2019
-    Scope : Factorial
+    Scope : Take input from user for factorial programe
     Git: https://github.com/martandsingh/
     FB: https://www.facebook.com/codemakerz
     Youtube: https://www.youtube.com/martand89
@@ -12,16 +12,19 @@
 '''
 
 def factorial(num):
-    if(num == 1):
+    if(num == 0):
+        return 0
+    elif(num == 1):
         return 1
     else:
-        return num * factorial(num-1)
+        return num * factorial(num - 1)
 
 _LONG_COMMENT = "-" * 50
 print(_LONG_COMMENT) # This will print "-" 50 times.
 print("Factorial")
 print(_LONG_COMMENT) # This will print "-" 50 times.
-num = 4
-facto = factorial(num)
-print("> factorial of %d is %d" %(num, facto))
+# We will take num from user
+num = int(input("enter the number: ")) # Type casting
+fact = factorial(num)
+print("> factorial of %d is %d" %(num, fact))
 print(_LONG_COMMENT) # This will print "-" 50 times.
